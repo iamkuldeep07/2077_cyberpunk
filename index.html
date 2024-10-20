@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home of the Cyberpunk 2077 universe — games, anime & moree</title>
+  <link rel="icon" type="image/png" href="https://www.cyberpunk.net/favicons/apple-icon-57x57.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @font-face {
+      font-family: 'GlitchGoblin';
+      src: url('./GlitchGoblin-2O87v.ttf') format('truetype');
+      font-display: swap;
+    }
+    body {
+      font-family: 'GlitchGoblin', sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="main w-full">
+    <nav class="w-full fixed top-0 left-0 px-10 py-3 flex justify-between items-center z-[5] mix-blend-difference">
+      <img class="w-[160px] mix-blend-screen filter saturate-150 contrast-125" src="./public/logo.png" alt="">
+      <div class="flex gap-5 items-center">
+        <a href="#home" class="neon-link tracking-tight text-white hover:text-blue-500 hover:text-shadow-neon transition-all duration-300">Home</a>
+        <a href="#features" class="neon-link tracking-tight text-white hover:text-blue-500 hover:text-shadow-neon transition-all duration-300">Features</a>
+        <a href="#products" class="neon-link tracking-tight text-white hover:text-blue-500 hover:text-shadow-neon transition-all duration-300">Products</a>
+        <a href="#community" class="neon-link tracking-tight text-white hover:text-blue-500 hover:text-shadow-neon transition-all duration-300">Community</a>
+        <a href="#signup" class="neon-link tracking-tight text-white hover:text-blue-500 hover:text-shadow-neon transition-all duration-300">Sign Up</a>
+      </div>
+    </nav>
+    <div id="home" class="w-full h-[150vh] overflow-hidden">
+      <img class="absolute w-3/4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-screen filter saturate-150 contrast-125" src="https://i.redd.it/3d-rendered-the-cyberpunk-logo-using-blender-v0-khopj82wqee91.png?width=1920&format=png&auto=webp&s=f42dbd8f5c04aedb9ba9291c1ba4d679029cc1f3" alt="">
+      <div class="w-[35rem] h-[35rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1] rounded-full bg-blue-800 blur-[90px]"></div>
+      <canvas id="canvas"></canvas>
+      <div class="relative text-center mt-20 z-10">
+        <h1 class="text-7xl mb-4 font-['GlitchGoblin'] font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">Cyberpunk 2077</h1>
+        <p class="text-xl text-cyan-400 max-w-2xl mx-auto font-['GlitchGoblin'] leading-relaxed">
+          Enter the dark and dangerous world of Night City, where megacorporations rule and cybernetic enhancements are a way of life. In Cyberpunk 2077, you'll navigate a neon-lit dystopia, make tough choices, and fight to survive in this groundbreaking open-world RPG.
+        </p>
+        </p>
+      </div>
+    </div>
+    <div id="features" class="w-full h-auto bg-gradient-to-b from-black via-blue-900 to-[#FCED0D] relative overflow-hidden pt-16 mt-8">
+      <div class="absolute inset-0 opacity-20 mix-blend-overlay"></div>
+      <div class="container mx-auto px-4 py-16 relative z-10">
+        <h2 class="text-6xl font-['GlitchGoblin'] text-center mb-12 text-cyan-400 glitch-text animate-pulse">Game Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-cyan-400 hover:border-pink-500 transition-all duration-300 hover:scale-105 transform animate-fadeIn">
+            <h3 class="text-2xl font-['GlitchGoblin'] text-pink-500 mb-4">Immersive Open World</h3>
+            <p class="text-cyan-200">Explore the vast, neon-lit streets of Night City, where every corner tells a story and danger lurks in the shadows.</p>
+          </div>
+          <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-cyan-400 hover:border-pink-500 transition-all duration-300 hover:scale-105 transform animate-fadeIn animation-delay-200">
+            <h3 class="text-2xl font-['GlitchGoblin'] text-pink-500 mb-4">Cybernetic Enhancements</h3>
+            <p class="text-cyan-200">Upgrade your body with cutting-edge tech to gain superhuman abilities and stay ahead in the unforgiving urban jungle.</p>
+          </div>
+          <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-cyan-400 hover:border-pink-500 transition-all duration-300 hover:scale-105 transform animate-fadeIn animation-delay-400">
+            <h3 class="text-2xl font-['GlitchGoblin'] text-pink-500 mb-4">Branching Storylines</h3>
+            <p class="text-cyan-200">Your choices shape the narrative. Navigate complex relationships and face the consequences of your actions in a reactive world.</p>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block bg-cyan-400 hover:bg-pink-500 text-black font-bold py-3 px-8 rounded-full transition-all duration-300 text-xl font-['GlitchGoblin'] hover:scale-110 transform animate-bounce">Enter Night City</a>
+        </div>
+      </div>
+      <div id="products" class="container mx-auto px-4 py-16">
+        <h2 class="text-6xl font-['GlitchGoblin'] text-center mb-12 text-yellow-400 glitch-text">Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="group relative overflow-hidden rounded-lg">
+            <img src="https://www.cyberpunk.net/build/images/home8/product-phantomliberty-final@2x-21744e1b.jpg" alt="Cyberpunk 2077" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-2xl font-['GlitchGoblin'] text-yellow-400 mb-2">Cyberpunk 2077</h3>
+              <p class="text-white">Experience the future in this open-world action-adventure</p>
+              <a href="#" class="mt-4 inline-block bg-yellow-400 text-black font-bold py-2 px-4 rounded hover:bg-yellow-300 transition-colors duration-300">Buy Now</a>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-lg">
+            <img src="https://www.cyberpunk.net/build/images/home8/product-edgerunners@2x-ef51ea00.jpg" alt="Phantom Liberty" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-2xl font-['GlitchGoblin'] text-yellow-400 mb-2">Phantom Liberty</h3>
+              <p class="text-white">New expansion for Cyberpunk 2077</p>
+              <a href="#" class="mt-4 inline-block bg-yellow-400 text-black font-bold py-2 px-4 rounded hover:bg-yellow-300 transition-colors duration-300">Pre-order</a>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-lg">
+            <img src="https://www.cyberpunk.net/build/images/home8/product-cp77@2x-4a388c1d.jpg" alt="Cyberpunk: Edgerunners" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-2xl font-['GlitchGoblin'] text-yellow-400 mb-2">Cyberpunk: Edgerunners</h3>
+              <p class="text-white">Anime series set in the Cyberpunk universe</p>
+              <a href="#" class="mt-4 inline-block bg-yellow-400 text-black font-bold py-2 px-4 rounded hover:bg-yellow-300 transition-colors duration-300">Watch Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="community" class="relative overflow-hidden w-full h-screen">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#FCED0D] via-blue-900 to-cyan-900 opacity-0 transition-opacity duration-1000 ease-in-out" id="background-gradient"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const gradient = document.getElementById('background-gradient');
+          gradient.style.opacity = '1';
+        });
+      </script>
+      <!-- Gradient background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 animate-gradient-x"></div>
+      
+      <!-- Content container -->
+      <div class="relative z-10 container mx-auto px-4 py-16">
+        <h2 class="text-6xl font-['GlitchGoblin'] text-center mb-12 text-cyan-400 glitch-text animate-pulse">Community & News</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Community Section -->
+          <div class="bg-black bg-opacity-30 p-6 rounded-lg border border-cyan-400 hover:border-pink-500 transition-all duration-300 hover:scale-105 transform animate-fadeIn opacity-0">
+            <h3 class="text-3xl font-['GlitchGoblin'] text-pink-500 mb-4">Community Hub</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center space-x-4 animate-slideInLeft opacity-0">
+                <i class="fas fa-users text-cyan-400 text-2xl"></i>
+                <p class="text-gray-300">Join our Discord for events and discussions</p>
+              </li>
+              <li class="flex items-center space-x-4 animate-slideInLeft opacity-0 animation-delay-200">
+                <i class="fas fa-paint-brush text-cyan-400 text-2xl"></i>
+                <p class="text-gray-300">Share your Cyberpunk-inspired artwork</p>
+              </li>
+              <li class="flex items-center space-x-4 animate-slideInLeft opacity-0 animation-delay-400">
+                <i class="fas fa-gamepad text-cyan-400 text-2xl"></i>
+                <p class="text-gray-300">Find players for multiplayer missions</p>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- News Section -->
+          <div class="bg-black bg-opacity-30 p-6 rounded-lg border border-cyan-400 hover:border-pink-500 transition-all duration-300 hover:scale-105 transform animate-fadeIn opacity-0 animation-delay-200">
+            <h3 class="text-3xl font-['GlitchGoblin'] text-pink-500 mb-4">Latest News</h3>
+            <ul class="space-y-4">
+              <li class="border-b border-cyan-400 pb-2 animate-slideInRight opacity-0">
+                <h4 class="text-xl text-cyan-300">Phantom Liberty Release Date</h4>
+                <p class="text-gray-300">Get ready for the next chapter in Night City...</p>
+              </li>
+              <li class="border-b border-cyan-400 pb-2 animate-slideInRight opacity-0 animation-delay-200">
+                <h4 class="text-xl text-cyan-300">New Cybernetic Implants</h4>
+                <p class="text-gray-300">Upgrade your arsenal with cutting-edge tech...</p>
+              </li>
+              <li class="animate-slideInRight opacity-0 animation-delay-400">
+                <h4 class="text-xl text-cyan-300">Night City Nights Event</h4>
+                <p class="text-gray-300">Join us for a virtual tour of Night City's hotspots...</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @keyframes gradient-x {
+        0%, 100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+      .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradient-x 15s ease infinite;
+      }
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+      }
+      .animate-slideInLeft {
+        animation: slideInLeft 1s ease-out forwards;
+      }
+      .animate-slideInRight {
+        animation: slideInRight 1s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideInLeft {
+        from { transform: translateX(-50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes slideInRight {
+        from { transform: translateX(50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      .animation-delay-200 {
+        animation-delay: 200ms;
+      }
+      .animation-delay-400 {
+        animation-delay: 400ms;
+      }
+    </style>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeIn');
+            entry.target.querySelectorAll('.animate-slideInLeft, .animate-slideInRight').forEach(el => {
+              el.style.animationPlayState = 'running';
+            });
+          } else {
+            entry.target.classList.remove('animate-fadeIn');
+            entry.target.querySelectorAll('.animate-slideInLeft, .animate-slideInRight').forEach(el => {
+              el.style.animationPlayState = 'paused';
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.animate-fadeIn').forEach(el => observer.observe(el));
+    </script>
+    <section id="signup" class="animate-fadeIn">
+      <div class="signup-container">
+        <h2 class="signup-title animate-slideInLeft">JOIN THE REBELLION</h2>
+        <p class="signup-description animate-slideInRight animation-delay-200">Sign up now to get exclusive access to the latest updates and insider information.</p>
+        <form class="signup-form animate-slideInLeft animation-delay-400">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">SIGN UP</button>
+        </form>
+        <p class="signup-terms animate-slideInRight animation-delay-400">By signing up, you agree to our Terms of Service and Privacy Policy.</p>
+      </div>
+    </section>
+
+    <style>
+      #signup {
+        background-image: url('https://images.ctfassets.net/4cd45et68cgf/5DFbx5ZKYlFTsAcBKaM0Oa/3c89af0d86d9f3b1c87f3afb475c8ebe/CP2077_RGB_en.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fcee0a;
+        padding: 60px 20px;
+        text-align: center;
+      }
+      .signup-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .signup-title {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .signup-description {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+      }
+      .signup-form {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .signup-form input {
+        padding: 10px;
+        width: 60%;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fcee0a;
+      }
+      .signup-form button {
+        padding: 10px 20px;
+        background-color: #fcee0a;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .signup-form button:hover {
+        background-color: #fff;
+      }
+      .signup-terms {
+        font-size: 0.8em;
+        opacity: 0.7;
+      }
+    </style>
+    <footer class="cyberpunk-footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Navigate</h3>
+          <ul>
+            <li><a href="#home" class="neon-link">Home</a></li>
+            <li><a href="#features" class="neon-link">Features</a></li>
+            <li><a href="#products" class="neon-link">Products</a></li>
+            <li><a href="#community" class="neon-link">Community</a></li>
+            <li><a href="#signup" class="neon-link">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="social-links">
+            <li>
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Subscribe</h3>
+          <form class="footer-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Cyberpunk Industries. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <style>
+      .cyberpunk-footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+        border-top: 2px solid #fff;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-section {
+        margin-bottom: 20px;
+      }
+
+      .footer-section h3 {
+        color: #fcee0a;
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+
+      .footer-section ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 10px;
+      }
+
+      .neon-link {
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+      }
+
+      .neon-link:hover, .neon-link:focus {
+        color: #00ffff; /* Changed to a lighter cyan color */
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; /* Reduced shadow layers and changed color */
+      }
+
+      .neon-link::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #00ffff; /* Changed to match the new hover color */
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .neon-link:hover::before, .neon-link:focus::before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+      .footer-form {
+        display: flex;
+        margin-top: 10px;
+      }
+
+      .footer-form input {
+        padding: 10px;
+        width: 70%;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      .footer-form button {
+        padding: 10px 20px;
+        background-color: #fcee0a;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
+      }
+
+      .footer-form button:hover {
+        background-color: #ff00ff;
+        color: #fff;
+        opacity: 0.9;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .social-links {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .social-link i {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        color: #00ffff;
+        transform: translateX(5px);
+      }
+
+      .social-link:hover i {
+        background-color: #00ffff;
+        color: #000;
+        box-shadow: 0 0 15px #00ffff;
+      }
+
+      @keyframes iconPulse {
+        0% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(0, 255, 255, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
+      }
+
+      .social-link:hover i {
+        animation: iconPulse 1.5s infinite;
+      }
+    </style>
+    </div>
+ 
+  <script type="module" src="main.js"></script>
+  <script>
+    document.querySelectorAll('.neon-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
