@@ -43,7 +43,7 @@ composer.addPass(rgbShiftPass);
 let model;
 
 new RGBELoader()
-  .load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/pond_bridge_night_1k.hdr', function(texture) {
+  .load('./public/pond_bridge_night_1k.hdr', function(texture) {
     const envMap = pmremGenerator.fromEquirectangular(texture).texture;
     scene.environment = envMap;
     texture.dispose();
